@@ -28,6 +28,28 @@ public class Service {
     private String description;
 
     @ManyToOne
+    @JoinColumn(name = "sprovider_id")
+    ServiceProvider serviceProvider;
+
+    @ManyToOne
+    @JoinColumn(name = "agreement_id")
+    Agreement agreement;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*@ManyToOne
     @JoinColumn(name = "provider_id")
-    private ServiceProvider serviceProvider;
+    private ServiceProvider serviceProvider;*/
 }

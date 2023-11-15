@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.aot.generate.GeneratedTypeReference;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -25,5 +28,9 @@ public class Customer {
 
     @Column(name = "address", nullable = false)
     private String address;
+
+    @OneToMany(mappedBy = "customer")
+    Set<Agreement> agreements = new HashSet<>();
+
 
 }

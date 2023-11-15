@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.Set;
+import java.util.HashSet;
 
 @Setter
 @Getter
@@ -36,5 +38,11 @@ public class Agreement {
     @Column(name = "note")
     private String note;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    Customer customer;
+
+    @OneToMany(mappedBy = "agreement")
+    Set<Service> services = new HashSet<>();
 
 }
