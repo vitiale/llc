@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IAgreement extends JpaRepository<Agreement, Long> {
+public interface IAgreementRepository extends JpaRepository<Agreement, Long> {
 
 }

@@ -24,6 +24,9 @@ public class ServiceProvider {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "description")
+    String description;
+
     @OneToMany(mappedBy = "serviceProvider")
     private List<Service>services;
     //Set<Service>services = new HashSet<>();
