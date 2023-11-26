@@ -22,7 +22,7 @@ public class ServiceProviderService {
         return iServiceProviderRepository.findById(id).orElse(null);
     }
 
-    public void saveServiceProvider(Long id, ServiceProvider serviceProvider){
+    public void saveServiceProvider(ServiceProvider serviceProvider){
         iServiceProviderRepository.save(serviceProvider);
     }
 

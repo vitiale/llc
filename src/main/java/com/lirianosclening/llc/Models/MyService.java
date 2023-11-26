@@ -7,15 +7,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "service")
-public class Service {
+public class MyService {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +32,6 @@ public class Service {
     @ManyToOne
     @JoinColumn(name = "agreement_id")
     Agreement agreement;
-
-
 
 
 

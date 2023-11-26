@@ -43,6 +43,6 @@ public class Agreement {
     Customer customer;
 
     @OneToMany(mappedBy = "agreement")
-    Set<Service> services = new HashSet<>();
+    Set<MyService> myServices = new HashSet<>();
 
 }

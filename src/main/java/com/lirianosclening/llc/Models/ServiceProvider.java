@@ -4,9 +4,7 @@ package com.lirianosclening.llc.Models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Setter
 @Getter
@@ -28,6 +26,6 @@ public class ServiceProvider {
     String description;
 
     @OneToMany(mappedBy = "serviceProvider")
-    private List<Service>services;
+    private List<MyService> myServices;
     //Set<Service>services = new HashSet<>();
 }
